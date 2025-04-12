@@ -2,12 +2,15 @@ plugins {
     java
 }
 
-group = "com.github.YourGitHubID" // ← JitPack용 group (예: com.github.hongjyeon)
-version = "1.0.0"                  // ← 스냅샷 말고 릴리즈 버전으로 변경
+group = "com.github.AliceNam93"
+version = "1.0.0"
 
 java {
     withJavadocJar()
     withSourcesJar()
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 repositories {
@@ -21,6 +24,11 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+//한글깨짐 방지
+tasks.withType<Javadoc> {
+    options.encoding = "UTF-8"
 }
 
 tasks.withType<Jar> {

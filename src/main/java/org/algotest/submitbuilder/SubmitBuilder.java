@@ -29,16 +29,16 @@ public class SubmitBuilder {
 
     private String getTemplate() {
         switch (platform) {
-            case "boj", "baekjoon":
+            case "boj", "baekjoon", "백준":
                 return getBojTemplate();
             default:
-                return "// Oopsie! Unknown platform: " + platform;
+                return "// 어머나!! 아직 지원하지 않는 플랫폼입니다 🫡: " + platform;
         }
     }
 
     private String getBojTemplate() {
         return """
-            // Oops! Here's your BOJ boilerplate 🫡
+            // 백준 기본 템플릿입니다 🫡
 
             import java.io.*;
             import java.util.*;
