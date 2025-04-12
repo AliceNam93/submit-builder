@@ -1,2 +1,2 @@
-rootProject.name = "submitBuilder"
+rootProject.name = "submitbuilder"
 

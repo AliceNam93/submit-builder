@@ -1,4 +1,5 @@
-package org.algoTest;
+package org.algotest.submitbuilder;
+
 import java.io.FileWriter;
 import java.io.IOException;
 

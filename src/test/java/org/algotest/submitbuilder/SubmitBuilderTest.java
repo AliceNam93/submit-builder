@@ -1,4 +1,4 @@
-package org.algoTest;
+package org.algotest.submitbuilder;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,23 +12,23 @@ class SubmitBuilderTest {
 
     @Test
     void testBasicGeneration() {
-        String generated = SubmitBuilder.generate("boj").toString();
-        assertTrue(generated.contains("public class Main"), "출력에 Main 클래스가 포함되어야 함");
+        SubmitBuilder builder = SubmitBuilder.generate("boj");
+        assertNotNull(builder);
     }
 
     @Test
     void testWriteToFile() throws Exception {
-        String code = SubmitBuilder.generate("boj");
+        SubmitBuilder builder = SubmitBuilder.generate("boj");
         String fileName = "TestMain.java";
 
-        SubmitBuilder.writeToFile(code, fileName);
+        builder.writeToFile(fileName);
 
         Path path = Path.of(fileName);
         assertTrue(Files.exists(path), "파일이 실제로 생성되어야 함");
         String content = Files.readString(path);
         assertTrue(content.contains("public class Main"));
 
-        // 깔끔하게 테스트 후 삭제
+        // 테스트 끝나고 정리
         Files.deleteIfExists(path);
     }
 }
