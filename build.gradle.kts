@@ -14,12 +14,15 @@ java {
 }
 
 repositories {
-    mavenCentral()
+    mavenCentral()  // 일반적인 라이브러리
+    maven("https://jitpack.io")  // GitHub 프로젝트용
 }
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+
+    implementation("com.github.AliceNam93:submit-builder:v1.0.2")
 }
 
 tasks.test {
