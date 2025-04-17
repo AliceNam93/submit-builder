@@ -35,7 +35,7 @@ public class Main {
     }
 }
 ```
-## 🎥 시현 영상
+## 🎥 시연 영상
 ### - Gradle 설정하기
 ![Image](https://github.com/user-attachments/assets/18dc80d6-6064-4f79-bf88-ae0dea46cf94)
 ### - Main에서 템플릿 파일 생성하기
