@@ -44,8 +44,10 @@ public class Main {
 
 
 
+## License
 
+This project is licensed under the [MIT License](./LICENSE).
 
 ## Disclaimer...
 - 현재는 자바21만 지원합니다
-- 현재는 백준 기준으로밖에
+- 현재는 백준 기준으로밖에..ㅠㅠ
